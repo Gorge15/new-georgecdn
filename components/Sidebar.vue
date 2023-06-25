@@ -30,7 +30,7 @@
             </div>
 
             <div class="copyright">
-                &copy; 2023 <span>georgecdn.ro</span>. All rights reserved.
+                &copy; 2023 <span @click="sendMedia(media.website)">georgecdn.ro</span>. All rights reserved.
             </div>
        </div>
     </div>
@@ -43,6 +43,7 @@
             return {
                 email: 'contact@georgecdn.ro',
                 media: {
+                    website: 'https://georgecdn.ro/',
                     instagram: 'https://www.instagram.com/george._1506/',
                     github: 'https://github.com/Gorge15',
                     linkedin: 'https://www.linkedin.com/in/georgian-ciobotaru-672b9021a/'
@@ -119,6 +120,7 @@
                 img {
                     width: 80%;
                     border-radius: 50%;
+
                 }
             }
 
@@ -192,6 +194,7 @@
                 text-align: center;
                 span {
                     color: @primary;
+                    cursor: pointer;
                 }
             }
         }

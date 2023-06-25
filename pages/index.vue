@@ -1,7 +1,10 @@
 <template>
     <div class="home" @onScroll="handleScroll">
         <Sidebar class="sidebar" />
-        <component class="component" :is="currentComponent"></component>
+        <div class="scroll">
+            <!-- <Home /> -->
+            <component id="home" :is="currentComponent"></component>
+        </div>
         <Navigation />
     </div>
 </template>
@@ -73,6 +76,21 @@ export default {
         height: 100%;
         padding: 65px 25px;
         border: 1px solid red;
+    }
+
+    .scroll {
+        padding: 25px;
+        margin: 25px;
+        width: 70%;
+        height: 90%;
+        overflow: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .scroll::-webkit-scrollbar {
+        display: none;
     }
 }
 </style>
